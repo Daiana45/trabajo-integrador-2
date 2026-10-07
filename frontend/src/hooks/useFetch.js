@@ -7,9 +7,6 @@ export const useFetch = (url) => {
 
   const getFetch = async () => {
     try {
-      setIsLoading(true);
-      setError(null);
-
       const response = await fetch(url, { credentials: "include" });
       const result = await response.json();
 
@@ -33,6 +30,7 @@ export const useFetch = (url) => {
         return;
       }
 
+      setError(null);
       setData(result);
     } catch (error) {
       console.log("Error al consultar la api", error);

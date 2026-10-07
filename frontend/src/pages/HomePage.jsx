@@ -1,5 +1,5 @@
 import { useFetch } from "../hooks/useFetch";
-import { Navbar } from "../componentes/Navbar";
+import { Navbar } from "../components/Navbar";
 
 export const HomePage = () => {
   const { data, isLoading, error } = useFetch(
