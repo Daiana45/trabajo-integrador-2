@@ -1,5 +1,4 @@
 import { useFetch } from "../hooks/useFetch";
-import { Navbar } from "../components/Navbar";
 
 export const HomePage = () => {
   const { data, isLoading, error } = useFetch(
@@ -7,8 +6,6 @@ export const HomePage = () => {
   );
 
   return (
-    <>
-    <Navbar/>
     <main className="mx-auto max-w-4xl p-4">
       <h1 className="mb-4 text-3xl font-bold">Artículos publicados</h1>
 
@@ -33,6 +30,5 @@ export const HomePage = () => {
           ))}
       </ul>
     </main>
-    </>
   );
 };
